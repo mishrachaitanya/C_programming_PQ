@@ -179,3 +179,59 @@
 //     }
 //     // printf("%d",size);
 //     }
+
+//Shifting Operator
+// int main(){
+//     unsigned int a;
+//     printf("Enter the hex value\n");
+//     scanf("%X"    , &a);
+
+//     unsigned int a1 = a >> 8  ;
+//     unsigned int a2 = a << 8;
+
+//     printf("Right shifted Hex: 0x%X\n",a1);
+//     printf("Left Shifted Hex: 0x%X",a2);
+
+// }
+
+
+// int greatest(int *c,int size){
+
+//     int i,max=*c;
+//     for(i=0;i<size;i++){
+//         if(*c>max) max=*c;
+//         c++;
+//     }
+//     return max;
+
+// }
+// int main(){
+//     int c[5];
+//     int * c1=c;
+//     scanf("%d %d %d %d %d",&c[0],&c[1],&c[2],&c[3],&c[4]);
+//     int size= sizeof(c)/ sizeof(c[0]);
+//     printf("Greatest number is %d",greatest(c1,size));
+// }
+
+
+//Smallest amongts all
+int smalles(int *p, int size){
+
+    int i, min=*p;
+    for(i=0;i<size;i++){
+        if (*p<min) min = *p;
+    }
+    return min;
+
+}
+
+int main(){
+    printf("Enter the numbers: \n");
+    int c[10];
+    int *c1 = c;
+    scanf("%d %d %d %d %d",&c[0], &c[1],&c[2],&c[3],&c[4]);
+
+    int size = sizeof(c)/ sizeof(c[0]);
+    printf("Smallest number is : %d out of all %d", smalles(c1,size),size);
+
+}
