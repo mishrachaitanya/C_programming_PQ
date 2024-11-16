@@ -251,3 +251,61 @@ number itself.
 //     }}
     
 // }
+
+//Hex into a Big Endian 
+
+// int main(){
+
+//     long int n;//=0x1121ABCD;
+//     scanf("%x",&n);
+//     unsigned char *c = (unsigned char*) &n;
+//     printf("%c\n",c[3]);
+//     printf("%c\n",c[2]);
+//     printf("%c\n",c[1]);
+//     printf("%c",c[0]);
+//     return 0;
+// }
+
+//Binary to Decimal
+// #include <math.h>
+// int main(){
+
+//     long int n;
+//     scanf("%ld",&n);
+//     // printf("%ld",n);
+//     long int i;
+//     int j=0,c=0;
+//     while(n>0){
+//         int r= n%2;
+//         // printf("%d\t",r);
+//         j = j+ r*pow(2,c);
+//         c++;
+//         n/=10;
+//         // printf("%d",r);
+//     }
+//     // for (i=0;i<c;i++){
+//         printf("%d", j);
+//     // }
+//     return 0;
+// }
+ 
+
+ //GCD using recursion
+int gdc(int a, int b){
+
+    if(a==0) return b;
+    if(b==0) return a;
+
+    if(a>b) gdc(a%b,b);
+    else if(b>a)  gdc(a,b%a);
+
+}
+
+ int     main(){
+
+    int a,b;
+    scanf("%d %d",&a, &b);
+    printf("%d",gdc(a,b));
+ }
+
+
