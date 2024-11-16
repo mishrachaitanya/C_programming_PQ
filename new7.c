@@ -100,3 +100,82 @@
 //     int size = length(str);
 //     printf("Length of the string is %d", size);
 // }
+
+
+//Display Char at kth location
+// char location(char *c, int k){
+//     return *(c+k-1);
+// }
+
+// int main(){
+//     char a[100];
+//     printf("Enter the sentence\n");
+//     scanf("%s",a);
+//     // int k=0;
+//     // printf("Enter the position\n");
+//     // scanf("%d",k);
+
+//     printf("%c",location(&a[0],2));
+// }
+
+
+// #Exploring different specifiers
+// int main(){
+
+    // double k;
+    // scanf("%Lf", &k);
+    // printf("%.4Lf",k);
+
+    // printf("Check it out!!\n");
+
+    // float k1;
+    // scanf("%f",&k1);
+    // printf("%.3f",k1);
+    // long int n;
+    // scanf("%ld",&n);
+    // printf("%ld\n",n);
+
+    // unsigned int a1;
+    // scanf("%u",&a1);
+    // printf("%u\n",a1);
+
+    // unsigned long int k2;
+    // scanf("%lu",&k2);
+    // printf("%lu\n",k2);
+
+    // unsigned int k3;
+    // scanf("%x",&k3);
+    // printf("%0X",k3);
+// }
+
+
+// //Convert hexadecimal to binary
+// int main(){
+//     unsigned int hex;
+//     scanf("%x",&hex);
+//     char str[30];
+//     sprintf(str,"%X", hex);
+//     int size= strlen(str);
+//     int i;
+//     for(i=0;i<size;i++){
+//         switch(str[i]){
+//             case 'A': printf("1010"); break;
+//             case 'B' : printf("1011"); break;
+//             case 'C' : printf("1100"); break;
+//             case 'D' : printf("1101"); break;
+//             case 'E':printf("1111"); break;
+//             case '0': printf("0000"); break;
+//             case '1': printf("0001");break;
+//             case '2':printf("0010"); break;
+//             case '3':printf("0011"); break;
+//             case '4':printf("0100"); break;
+//             case '5':printf("0101"); break;
+//             case '6':printf("0110"); break;
+//             case '7':printf("0111"); break;
+//             case '8':printf("1000"); break;
+//             case '9':printf("1001"); break;
+            
+//         }
+//     }
+//     // printf("%d",size);
+//     }
