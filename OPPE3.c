@@ -163,18 +163,18 @@
 
 // Count Words
 // Count the number of words in a given string.
-#include <ctype.h>
-int main(){
-    char str[100]="This is the string that i need to check the question with";
-    int i,c=0,g=0;
-    for(i=0;i<strlen(str);i++){
-        if(str[i]==' ' || str[i] ==',' || str[i]=='!' || str[i]=='?'){
-            c++;
-        }
-        if(isalpha(str[i]) || isdigit(str[i])){
-            g++;
-            break;
-        }
-    }
-    printf("The number of words in the sentence are = %d : : : : %d",c,g );
-}
+// #include <ctype.h>
+// int main(){
+//     char str[100]="This is the string that i need to check the question with";
+//     int i,c=0,g=0;
+//     for(i=0;i<strlen(str);i++){
+//         if(str[i]==' ' || str[i] ==',' || str[i]=='!' || str[i]=='?'){
+//             c++;
+//         }
+//         if(isalpha(str[i]) || isdigit(str[i])){
+//             g++;
+//             break;
+//         }
+//     }
+//     printf("The number of words in the sentence are = %d : : : : %d",c,g );
+// }
