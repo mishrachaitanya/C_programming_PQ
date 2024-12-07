@@ -1,1 +1,1 @@
-String is to be input via given prompt
+ 2. Appending This hoefully will be appended to newfile.txt

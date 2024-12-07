@@ -1,2 +1,4 @@
+ 2. Appending This hoefully will be appended to newfile.txt
+ 4. Appending This hoefully will be appended to newfile.txt
  1. Appending This hoefully will be appended to newfile.txt
  3. Appending This hoefully will be appended to newfile.txt
