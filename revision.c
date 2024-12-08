@@ -878,6 +878,487 @@
 // File Line Numbers
 
 // Write a program that reads a file line by line using fgets and writes the content to another file, prefixing each line with its line number (e.g., 1. Line content).
-// Duplicate Lines Removal
+// int main(){
+//     FILE *fptr;
+//     fptr = fopen("notes.txt","r");
+//     FILE *fout = fopen("Newfile.txt", "w");
 
+//     if(fptr == NULL || fout == NULL){
+//         exit(1);
+//     } int c=0;
+//     char str[100];
+//     while(fgets(str,100,fptr)!=NULL){
+//         c++;
+//         fprintf(fout, "Line %d. %s", c,str);
+//     }
+//     fclose(fptr);
+//     fclose(fout);
+
+
+
+// }
 // Write a program to remove duplicate lines from a file. Use fgets to read and write unique lines to a new file.
+// int main(){
+//     int i;
+//     FILE *fptr = fopen("Newfile.txt","r");
+//     FILE *fout = fopen("notes.txt","w");
+
+//     char str[100];
+//     char s[200]="";
+//     while(fgets(str,100,fptr)!=NULL){
+//         if(strstr(s,str)){
+//             continue;
+//         }
+//         else {
+//             strcat(s,str);
+//             fputs(str,fout);
+//         }
+//     }
+//     printf("%s",s);
+
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+// //Write Solution code below
+// struct Score {
+//     int rollno;
+//     int marks;
+// };
+// void findGreaterThanAverage(struct Score arr[], int n){
+//     int i,j,avg=0;
+//     for(i=0;i<n;i++){
+//         avg += arr[i].marks;
+//     }
+//     avg /= n;
+//     for(i=0;i<n;i++){
+//         if(arr[i].marks>=avg){
+//             printf("%d\n",arr[i].rollno);
+//         }
+//     }
+// }
+// int main()
+// {
+// int n;
+// scanf("%d", &n);
+// struct Score scores[n];
+// for (int i = 0; i < n; i++)
+// {
+// scanf("%d",&scores[i].rollno);
+// scanf("%d",&scores[i].marks);
+// }
+// findGreaterThanAverage(scores, n);
+// return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <string.h>
+// //Write Solution code below
+// struct Person{
+//     char name[100];
+//     int age;
+//     char city[100];
+// };
+// void findYoungestPersons(struct Person arr[], int n){
+
+//     int i,j,min=1110;
+//     for(i=0;i<n;i++){
+//         if(arr[i].age < min){
+//             min=arr[i].age;        }
+//     }
+//     for(i=0;i<n;i++){
+//         if(arr[i].age == min){
+//             printf("%s: %s\n", arr[i].name, arr[i].city);
+//         }
+//     }
+    
+// }
+// int main()
+// {
+// int n;
+// scanf("%d", &n);
+// struct Person persons[n];
+// for (int i = 0; i < n; i++)
+// {
+// scanf("%s",persons[i].name);
+// scanf("%d",&persons[i].age);
+// scanf("%s",persons[i].city);
+// }
+// findYoungestPersons(persons, n);
+// return 0;
+// }
+
+
+
+// Count Number of Lines in a File: Write a program to count the number of lines in a text file.
+
+
+// int main(){
+//     FILE *fptr,*fout,*fout1;
+//     fptr = fopen("notes.txt","r");
+//     fout= fopen("new.txt","w");
+//     fout1= fopen("new1.txt","w");
+//     int c=0;
+//     char str[100];
+//     while(fgets(str,100,fptr)!=NULL){
+//         c++;
+//         for(int i=0;i<strlen(str);i++){
+//             fputc(str[i],fout);
+//         }
+//         fputs(str,fout1);
+//     }
+//     fclose(fptr);
+//     fclose(fout);
+//     fclose(fout1);
+// }
+
+
+//Transpose of a matrix
+// void tranpose(int row, int col){
+//     int **arr1 = (int **)malloc(sizeof(int *)*row);
+//     int i,j;
+//     for(i=0;i<row;i++){
+//         arr1[i]=(int *)malloc(sizeof(int)*col);
+//     }
+//     for(i=0;i<row;i++){
+//         for(j=0;j<col;j++){
+//             scanf("%d",&arr1[i][j]);
+//         }
+//     }
+//     int **arr = (int **)malloc(sizeof(int *)*col);
+//     for(i=0;i<col;i++){
+//         arr[i]=(int *)malloc(sizeof(int)*row);
+//     }
+//     for(i=0;i<row;i++){
+//         for(j=0;j<col;j++){
+//             arr[j][i]=arr1[i][j];
+//         }
+//     }
+//     for(i=0;i<row;i++){
+//         for(j=0;j<col;j++){
+//             printf("%d ",arr1[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     for(i=0;i<col;i++){
+//         for(j=0;j<row;j++){
+//             printf("%d ",arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+    
+
+// }
+// int main(){
+
+//     int row=3, col=2;
+//     tranpose(row,col);
+// }
+
+
+#include <stdio.h>
+#include <string.h>
+
+// // Define the Student struct
+// struct Student {
+//     char name[50];
+//     int marks;
+// };
+
+// Function to sort the array of students by marks in descending order
+// void sortByMarks(struct Student students[], int n) {
+//     int i,j,max=-120;
+//     struct Student temp;
+//     for(i=0;i<n;i++){
+//         for(j=0;j<n;j++){
+//             if(students[i].marks<students[j].marks){
+//                 temp = students[i];
+//                 students[i]=students[j];
+//                 students[j]=temp;
+//             }
+//         }
+//     }
+//     for(i=0;i<n;i++){
+//         printf("%s: %d\n",students[i].name,students[i].marks);
+//     }
+
+// }
+
+// int main() {
+//     // Array of Student structs with filled-in values
+//     struct Student students[5] = {
+//         {"Alice", 85},
+//         {"Bob", 92},
+//         {"Charlie", 78},
+//         {"David", 88},
+//         {"Eve", 91}
+//     };
+
+//     // Number of students
+//     int n = 5;
+
+//     // Call the sort function to sort the students by marks in descending order
+//     sortByMarks(students, n);
+
+//     // Displaying the sorted student data
+//     printf("Sorted student data (by marks in descending order):\n");
+//     for (int i = 0; i < n; i++) {
+//         printf("Name: %s, Marks: %d\n", students[i].name, students[i].marks);
+//     }
+
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+// #include <string.h>
+
+// // Define the Address struct
+// struct Address {
+//     char street[50];
+// };
+
+// // Define the Student struct, which contains Address as a nested struct
+// struct Student {
+//     char name[50];
+//     int marks;
+//     struct Address address;  // Nested struct
+// };
+
+// // Define the Class struct that contains an array of Student structs
+// struct Class {
+//     struct Student students[5];  // Array of 5 students
+// };
+
+// // Function to sort the array of students by marks in descending order
+// void sortByMarks(struct Class* classObj) {
+//     int i,j,max=0;
+//     for(i=0;i<5;i++){
+//         for(j=0;j<5;j++){
+//             if(classObj->students[i].marks < classObj -> students[j].marks){
+//                 struct Student temp = classObj->students[i];
+//                 classObj->students[i]=classObj->students[j];
+//                 classObj->students[j]=temp; 
+//             }
+//         }
+//     }
+//     for(i=0;i<5;i++){
+//         printf("Name: %s, Marks: %d\n--%s \n", classObj->students[i].name,classObj->students[i].marks, classObj->students->address.street);
+//     }
+    
+// }
+
+// int main() {
+//     // Create an instance of Class with students' data
+//     struct Class class1 = {
+//         {
+//             {"Alice", 85, {"Street 1"}},
+//             {"Bob", 92, {"Street 2"}},
+//             {"Charlie", 78, {"Street 3"}},
+//             {"David", 88, {"Street 4"}},
+//             {"Eve", 91, {"Street 5"}}
+//         }
+//     };
+
+//     // Call the sort function to sort the students by marks in descending order
+//     sortByMarks(&class1);
+
+//     // Displaying the sorted student data
+//     printf("Sorted student data (by marks in descending order):\n");
+//     for (int i = 0; i < 5; i++) {
+//         printf("Name: %s, Marks: %d, Address: %s\n", class1.students[i].name, class1.students[i].marks, class1.students[i].address.street);
+//     }
+
+//     return 0;
+// }
+
+
+// Remove Duplicate Characters: Write a program that removes duplicate characters from a string.
+
+// int main(){
+//     char str[100]="String is String favorite";
+//     char ch[100]="";
+
+//     int i,j,k=0,flag=0;
+//     for(i=0;i<strlen(str);i++){
+//         flag=0;
+//         for(j=0;j<=k;j++){
+//             if(str[i]==ch[j] && str[i]!=' '){
+//                 // str[i]=str[i+1];
+//                 flag=1;
+//                 break;
+//                 }
+//             }
+//         if(!flag){
+//             ch[k]=str[i];
+//             k++;
+//         }      
+//     }
+//     printf("%s",ch);
+
+// }
+// // Complete the function swap_name that that takes a pointer variable which contains a string representing a "first_name last_name". The function rearranges it to become "last_name first_name" within the same pointer variable.
+
+// Input
+
+// A string containing the "first_name last_name".
+
+// Output
+
+// The same variable containing the rearranged string "last_name first_name".
+
+// Sample Input
+
+// John Doe
+// Sample Output
+
+// // Doe John
+// #include <stdlib.h>
+// #include <string.h>
+// #include <ctype.h>
+// #include <stdio.h>
+// void swap_name(char *name){
+//     char str[100]="";
+//     int i,j,l=strlen(name),k=0;
+//     for(i=0;i<l;i++){
+//         if(name[i]==' '){
+//             for(j=i+1;j<strlen(name);j++){
+//                 str[k]=name[j];
+//                 k++;
+//             }
+//         }
+//     }
+//     str[k]=' ';
+//     k++;
+//     for(i=0;i<strlen(name);i++){
+//         if(name[i]!=' '){
+//             str[k] = name[i];
+//             k++;
+//         }
+//         else break;
+//     }
+//     for(i=0;i<strlen(name);i++){
+//         name[i]=str[i];
+//     }
+// }
+
+// int main(){
+//     char name[100];
+//     fscanf(stdin,"%[^\n]",name);
+//     swap_name(name);
+//     printf("%s",name);
+// }
+
+
+// int main(){
+//     int arr[14]={1,2,322,12,22,22,4,12341,5234,32,12,231313,4444,333};
+//     int i;int max=0,smax=0;
+//     for(i=0;i<14;i++){
+//         if(arr[i]>max){
+//             max=arr[i];
+//         }
+//     }
+//     for(i=0;i<14;i++){
+//         if(arr[i]>smax && arr[i]!=max){
+//             smax=arr[i];
+//         }
+//     }
+//     printf("Seconf Max %d",smax);
+// }
+
+// int main(){
+
+//     char str[500]="Racha hai Srishti Ko jis Prabhu ne Wahi ye Shristi Chala rahe hai!!";
+//     int i,j;
+    // // char str2[200]="";int k=strlen(str)-1;
+    // // for(i=0;i<strlen(str);i++){
+    // //     str2[k]=str[i];
+    // //     k--;
+    // // }
+    // //     printf("%s\n",str);
+    // //     printf("%s\n", str2);
+    // printf("%lu",strstr(str,"Prabhu")-str);
+    // // printf("%lu",*str);
+
+// }
+
+// struct Students{
+//     char name[50];
+//     int marks;
+// };
+// int main(){
+//     struct Students new[5]={
+//          {"John",  85},
+//          {"Alice",  92},
+//          {"Bob", 75},
+//          {"David",  89},
+//          {"Eva",  96}
+//     }  ;
+//     struct Students temp;
+//     int i,max=-100;
+//     for(i=0;i<5;i++){
+//         if(new[i].marks>max){
+//             max=new[i].marks;
+//             temp = new[i];
+//         }
+//     }
+//     printf("Student with Highest marks: \n%s %d",temp.name,temp.marks);
+
+
+// }
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// int main(){
+//     FILE *fptr;
+//     FILE *fout;
+//     fptr = fopen("notes.txt","r");
+//     fout = fopen("123.txt","w");
+//     int i,j;
+//     if(fptr == NULL || fout ==NULL) exit(1);
+//     char str[1000]; int c=0;
+//     while(fgets(str,1000,fptr)!=NULL){
+//         if(c%2==0){
+//             printf("\nThis is from STDOUT: %s\n", str);
+//         }
+//         else{
+//             printf("Line: %s (written to file)\n",str);
+//             fputs(str,fout);
+//         }
+//         for(i=0;i<strlen(str);i++){
+//             if(str[i]>=0 && str[i]<=9){
+//                 printf("These are the number preesnt in line %d: %s",c,str[i]);
+//             }
+//         }
+//             c++;
+//     }
+//     fclose(fptr);
+//     fclose(fout);
+//     printf("\n----------------------\n");
+//     printf("Now Reading from the files where the above sentence have been put\n");
+//     char ch[100]="";
+//     FILE *fptr1= fopen("123.txt","r");
+//     while(fgets(ch,100,fptr1)!=NULL){
+//         printf("%s", ch);
+//     }
+//     fclose(fptr1);
+// }
+
+// Jai Mata Di!!!!!!!
+
+//
+int main(){
+    int arr[3]={1,2,3};
+    int arr1[3];
+    int i,c=0;
+    for(i=2;i>=0;i--){
+        arr1[c]=arr[i];
+        c++;
+    }
+    for(i=0;i<3;i++){
+        printf("%d ",arr1[i]);
+    }
+}

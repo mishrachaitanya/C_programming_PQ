@@ -1,1 +1,10 @@
- 2. Appending This hoefully will be appended to newfile.txt
+Line 1. Hello how are you doing sir!?
+Line 2. I am doing fine sir!
+Line 2. I am doing fine sir!
+Line 2. I am doing fine sir!
+Line 2. I am doing fine sir!
+Line 3. How about you!!??
+Line 4. am am am am
+Line 4. am am am am
+Line 4. am am am am
+Line 4. am am am am
